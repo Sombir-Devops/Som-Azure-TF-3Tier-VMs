@@ -1,7 +1,7 @@
 trigger:
 - main
 pool:
-      $(Agent_Pool)
+      $(Agent_Pool) #Adding Agent hosted on Laptop
 stages:
 # Build Stage 
 - stage: Build
