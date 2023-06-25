@@ -1,7 +1,7 @@
 trigger:
 - main
 pool:
-      vmImage: 'ubuntu-latest'
+      $(Agent_Pool)
 stages:
 # Build Stage 
 - stage: Build
