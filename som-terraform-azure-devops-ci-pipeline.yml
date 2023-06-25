@@ -1,6 +1,7 @@
 trigger:
 - main
-
+pool:
+      vmImage: 'ubuntu-latest'
 stages:
 # Build Stage 
 - stage: Build
@@ -8,8 +9,6 @@ stages:
   jobs:
   - job: Build
     displayName: Build Job
-    pool:
-      vmImage: 'ubuntu-latest'
     steps: 
 ## Publish Artifacts pipeline code in addition to Build and Push          
     - bash: echo Contents in System Default Working Directory; ls -R $(System.DefaultWorkingDirectory)        
