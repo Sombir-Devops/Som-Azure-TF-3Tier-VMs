@@ -9,11 +9,18 @@ terraform {
 provider "azurerm" {
   features {}
 
-  subscription_id   = "35b0fa4f-b6ba-4752-87a9-d644b3f23b8b"
-  tenant_id         = "008e45fa-c27b-4574-aefd-9adb4a37493f"
-  client_id         = "d3614534-118d-40ff-955f-2fa44e25777f"
-  client_secret     = ".v58Q~~Iu-Sz4XujfueVXhUgR3AjAkMBE7QTBbeR"
+ # subscription_id   = "35b0fa4f-b6ba-4752-87a9-d644b3f23b8b"
+ # tenant_id         = "008e45fa-c27b-4574-aefd-9adb4a37493f"
+ # client_id         = "d3614534-118d-40ff-955f-2fa44e25777f"
+ # client_secret     = ".v58Q~~Iu-Sz4XujfueVXhUgR3AjAkMBE7QTBbeR"
 }
+# Terraform State Storage to Azure Storage Container
+#  backend "azurerm" {
+ #   resource_group_name   = "som-terraform-storage-rg"
+  #  storage_account_name  = "terraformstate3tier"
+ #   container_name        = "tfstatefiles"
+ #   key                   = "3tier-som-terraform.tfstate"
+  #}   
 
 module "resourcegroup" {
   source         = "./modules/resourcegroup"
