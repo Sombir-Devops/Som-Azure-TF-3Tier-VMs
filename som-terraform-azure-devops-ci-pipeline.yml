@@ -1,7 +1,8 @@
 trigger:
 - main
 pool:
-      $(Agent_Pool) #Adding Agent hosted on VM
+      $(Agent_Pool)
+      #$(Agent_Pool) #Adding Agent hosted on VM
 stages:
 # Build Stage 
 - stage: Build
